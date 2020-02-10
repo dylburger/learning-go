@@ -183,3 +183,22 @@ An infinite loop is very compact:
 for {
 }
 ```
+
+# If
+
+You can make a short assignment in the context of the if statement.
+
+Below, `v` is only defined in the context of the condition.
+
+```go
+func add(x, n int) int {
+    if v := Math.pow(); v < 30 {
+        return v
+    }
+    return n
+}
+```
+
+### If / else
+
+However, if you declare a variable within an `if` statement, you can use it within any of the else blocks, too.
