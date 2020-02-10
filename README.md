@@ -76,3 +76,19 @@ x: int
 ```
 
 Go just drops the `:` for brevity.
+
+When two or more consecutive named function parameters share the same type, you can elide the argument names and just include the type at the end. For example these two are equivalent:
+
+```go
+func add(x int, y int) int {
+    return x + y
+}
+
+func add(x, y int) int {
+    return x + y
+}
+```
+
+A function can return any number of results, comma-separated (`return-multiple-args.go`).
+
+Go's return values may be named. Declare variables within the function and then issue a "naked return" at the end of the function.
