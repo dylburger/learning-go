@@ -1,5 +1,9 @@
 # Learning Go
 
+## Questions
+
+- Why does the binary I get from running `go build` take so long to run the first time? My optional for loop took forever.
+
 ## Resources
 
 - [golang.org docs](https://golang.org/doc/#learning)
@@ -158,3 +162,24 @@ const Pi = 3.14
 Constants cannot be declared using short assigment (`:=`) syntax.
 
 ### For loops
+
+Go only has one looping construct: the `for` loop.
+
+Basic for loops have three, semi-colon delimited statements:
+
+- The init statement: executed before the first iteration.
+- The condition expression: evaluated _before_ every iteration.
+- The post statement: executed at the end of every iteration.
+
+The loop will stop iterating once the boolean condition expression evaluates to false.
+
+The init and post statements are optional.
+
+### Infinite loops
+
+An infinite loop is very compact:
+
+```go
+for {
+}
+```
